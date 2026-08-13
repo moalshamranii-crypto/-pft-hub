@@ -17,12 +17,12 @@ var CACHE = 'pft-hub-v1';
 var CORE = [
   './',
   './index.html',
-  './assets/site.css',
-  './assets/site.js',
-  './assets/favicon.svg',
-  './assets/icon-192.png',
-  './assets/icon-512.png',
-  './assets/apple-touch-icon.png',
+  './site.css',
+  './site.js',
+  './favicon.svg',
+  './icon-192.png',
+  './icon-512.png',
+  './apple-touch-icon.png',
   './manifest.webmanifest'
 ];
 
