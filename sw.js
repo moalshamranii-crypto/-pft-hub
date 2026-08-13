@@ -19,6 +19,7 @@ var CORE = [
   './index.html',
   './site.css',
   './site.js',
+  './quiz.js',
   './favicon.svg',
   './icon-192.png',
   './icon-512.png',

@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Staff education reference for the Respiratory Care Laboratory Section: pulmonary function testing procedures, acceptability criteria and interpretation, based on current ATS/ERS technical standards.">
+<meta name="description" content="Staff education reference for the Respiratory Care Laboratory: pulmonary function testing procedures, acceptability criteria and interpretation, based on current ATS/ERS technical standards.">
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#0B1E26">
-<title>PFT Education Hub &mdash; Respiratory Care Laboratory</title>
+<title>PFT Education Hub</title>
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -17,75 +17,70 @@
 <link rel="stylesheet" href="site.css">
 </head>
 <body>
+<div id="prog"></div>
 <div class="scrim" id="scrim"></div>
-<div class="shell">
 
-<!-- ================= SIDEBAR ================= -->
+<div class="shell">
 <aside class="side" id="side">
   <div class="brand">
-    <div class="mark">
+    <a href="#home" data-p="home">
       <svg width="30" height="30" viewBox="0 0 30 30" fill="none" aria-hidden="true">
         <rect width="30" height="30" rx="7" fill="#0F7B75"/>
-        <path d="M5 21 C7 21 8 9 12 9 C16 9 15.5 21 25 21" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/>
-        <circle cx="12" cy="9" r="1.8" fill="#fff"/>
+        <path d="M4.5 22 C7 22 8 8.5 12.5 8 C17 8.5 16.5 22 25.5 22" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round"/>
       </svg>
-      <div>
-        <b>PFT Education Hub</b>
-        <span>Respiratory Care Lab</span>
-      </div>
-    </div>
+      <span><b>PFT Education Hub</b><span>Respiratory Care Lab</span></span>
+    </a>
   </div>
 
-  <div class="searchwrap">
-    <input id="q" type="search" placeholder="Search tests, criteria, values…" autocomplete="off" aria-label="Search the hub">
-  </div>
-  <div id="noresult">No section matches that term.</div>
+  <button class="searchbtn" id="searchbtn" type="button">
+    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+      <circle cx="7" cy="7" r="5" stroke="currentColor" stroke-width="1.6"/>
+      <path d="M11 11l3.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    </svg>
+    Search everything
+    <span class="kb">/</span>
+  </button>
 
   <nav class="nav" id="nav">
-    <div class="navgroup">
+    <div class="grp">
       <h5>Start here</h5>
-      <a href="#home" data-p="home"><svg class="g" viewBox="0 0 22 14"><path d="M2 12h18" stroke="currentColor" stroke-width="1.4"/><path d="M4 12V6l4-3 4 5 3-2 3 6" stroke="currentColor" stroke-width="1.4" fill="none"/></svg>Overview</a>
-      <a href="#foundations" data-p="foundations"><svg class="g" viewBox="0 0 22 14"><circle cx="8" cy="7" r="4.5" stroke="currentColor" stroke-width="1.4" fill="none"/><path d="M13 7h7" stroke="currentColor" stroke-width="1.4"/></svg>Physiology &amp; terms</a>
-      <a href="#prep" data-p="prep"><svg class="g" viewBox="0 0 22 14"><rect x="3" y="2" width="12" height="10" rx="2" stroke="currentColor" stroke-width="1.4" fill="none"/><path d="M6 6h6M6 9h4" stroke="currentColor" stroke-width="1.4"/></svg>Patient preparation</a>
-      <a href="#qc" data-p="qc"><svg class="g" viewBox="0 0 22 14"><path d="M2 7h5l2-4 3 8 2-4h6" stroke="currentColor" stroke-width="1.4" fill="none"/></svg>Calibration &amp; QC</a>
+      <a href="#home" data-p="home" data-c="#5B4B8A"><span class="dot"></span>Overview</a>
+      <a href="#foundations" data-p="foundations" data-c="#5B4B8A"><span class="dot"></span>Physiology & terms</a>
+      <a href="#prep" data-p="prep" data-c="#5B4B8A"><span class="dot"></span>Patient preparation</a>
+      <a href="#qc" data-p="qc" data-c="#5B4B8A"><span class="dot"></span>Calibration & QC</a>
     </div>
-
-    <div class="navgroup">
+    <div class="grp">
       <h5>Core lung function</h5>
-      <a href="#spirometry" data-p="spirometry"><svg class="g" viewBox="0 0 22 14"><path d="M3 12c2 0 3-9 6-9s3.5 9 10 9" stroke="currentColor" stroke-width="1.4" fill="none"/></svg>Spirometry</a>
-      <a href="#bdr" data-p="bdr"><svg class="g" viewBox="0 0 22 14"><path d="M3 12c2 0 2.5-6 5-6s3 6 8 6" stroke="currentColor" stroke-width="1.4" fill="none" opacity=".45"/><path d="M3 12c2 0 3-9 6-9s3.5 9 10 9" stroke="currentColor" stroke-width="1.4" fill="none"/></svg>Bronchodilator response</a>
-      <a href="#volumes" data-p="volumes"><svg class="g" viewBox="0 0 22 14"><ellipse cx="11" cy="7" rx="7" ry="4.5" stroke="currentColor" stroke-width="1.4" fill="none" transform="rotate(-22 11 7)"/></svg>Lung volumes</a>
-      <a href="#dlco" data-p="dlco"><svg class="g" viewBox="0 0 22 14"><path d="M2 11h4l3-8 3 8h8" stroke="currentColor" stroke-width="1.4" fill="none"/></svg>DLCO</a>
-      <a href="#oscillometry" data-p="oscillometry"><svg class="g" viewBox="0 0 22 14"><path d="M2 7q2.5-5 5 0t5 0 5 0 3-3" stroke="currentColor" stroke-width="1.4" fill="none"/></svg>Oscillometry / IOS</a>
-      <a href="#muscle" data-p="muscle"><svg class="g" viewBox="0 0 22 14"><path d="M11 2v10M6 7l5-5 5 5" stroke="currentColor" stroke-width="1.4" fill="none"/></svg>MIP / MEP / SNIP</a>
+      <a href="#spirometry" data-p="spirometry" data-c="#0F7B75"><span class="dot"></span>Spirometry</a>
+      <a href="#bdr" data-p="bdr" data-c="#0F7B75"><span class="dot"></span>Bronchodilator response</a>
+      <a href="#volumes" data-p="volumes" data-c="#0F7B75"><span class="dot"></span>Lung volumes</a>
+      <a href="#dlco" data-p="dlco" data-c="#0F7B75"><span class="dot"></span>DLCO</a>
+      <a href="#oscillometry" data-p="oscillometry" data-c="#0F7B75"><span class="dot"></span>Oscillometry / IOS</a>
+      <a href="#muscle" data-p="muscle" data-c="#0F7B75"><span class="dot"></span>MIP / MEP / SNIP</a>
     </div>
-
-    <div class="navgroup">
-      <h5>Provocation &amp; exercise</h5>
-      <a href="#mct" data-p="mct"><svg class="g" viewBox="0 0 22 14"><path d="M2 3h18M2 3c0 6 4 9 9 9s9-3 9-9" stroke="currentColor" stroke-width="1.4" fill="none"/></svg>Methacholine challenge</a>
-      <a href="#sixmwt" data-p="sixmwt"><svg class="g" viewBox="0 0 22 14"><path d="M3 12h16" stroke="currentColor" stroke-width="1.4"/><path d="M5 12V8l3-4 2 4-2 4" stroke="currentColor" stroke-width="1.4" fill="none"/></svg>6-minute walk test</a>
-      <a href="#cpet" data-p="cpet"><svg class="g" viewBox="0 0 22 14"><path d="M2 12l5-2 4-6 4 4 5-6" stroke="currentColor" stroke-width="1.4" fill="none"/></svg>CPET</a>
-      <a href="#hast" data-p="hast"><svg class="g" viewBox="0 0 22 14"><path d="M2 9l18-6-7 9-2-3-9 0z" stroke="currentColor" stroke-width="1.3" fill="none"/></svg>Hypoxic challenge (HAST)</a>
+    <div class="grp">
+      <h5>Provocation & exercise</h5>
+      <a href="#mct" data-p="mct" data-c="#B0761F"><span class="dot"></span>Methacholine challenge</a>
+      <a href="#sixmwt" data-p="sixmwt" data-c="#B0761F"><span class="dot"></span>6-minute walk test</a>
+      <a href="#cpet" data-p="cpet" data-c="#B0761F"><span class="dot"></span>CPET</a>
+      <a href="#hast" data-p="hast" data-c="#B0761F"><span class="dot"></span>Hypoxic challenge</a>
     </div>
-
-    <div class="navgroup">
-      <h5>Blood gas &amp; bronchoscopy</h5>
-      <a href="#abg" data-p="abg"><svg class="g" viewBox="0 0 22 14"><path d="M11 2s5 5 5 8a5 5 0 0 1-10 0c0-3 5-8 5-8z" stroke="currentColor" stroke-width="1.3" fill="none"/></svg>Arterial blood gas</a>
-      <a href="#bronch" data-p="bronch"><svg class="g" viewBox="0 0 22 14"><path d="M11 2v5m0 0-4 5m4-5 4 5" stroke="currentColor" stroke-width="1.4" fill="none"/></svg>Bronchoscopy &amp; EBUS</a>
+    <div class="grp">
+      <h5>Blood gas & bronchoscopy</h5>
+      <a href="#abg" data-p="abg" data-c="#A5333F"><span class="dot"></span>Arterial blood gas</a>
+      <a href="#bronch" data-p="bronch" data-c="#A5333F"><span class="dot"></span>Bronchoscopy & EBUS</a>
     </div>
-
-    <div class="navgroup">
+    <div class="grp">
       <h5>Reading the report</h5>
-      <a href="#interpretation" data-p="interpretation"><svg class="g" viewBox="0 0 22 14"><path d="M3 12V3h13l3 3v6z" stroke="currentColor" stroke-width="1.3" fill="none"/><path d="M6 7h8M6 10h5" stroke="currentColor" stroke-width="1.3"/></svg>Interpretation</a>
-      <a href="#patterns" data-p="patterns"><svg class="g" viewBox="0 0 22 14"><path d="M2 12c2 0 3-8 5-8s2 8 4 8" stroke="currentColor" stroke-width="1.3" fill="none"/><path d="M13 12c1.5 0 2-6 3.5-6s2 6 3.5 6" stroke="currentColor" stroke-width="1.3" fill="none"/></svg>Loop patterns</a>
+      <a href="#interpretation" data-p="interpretation" data-c="#1C3A45"><span class="dot"></span>Interpretation</a>
+      <a href="#patterns" data-p="patterns" data-c="#1C3A45"><span class="dot"></span>Loop patterns</a>
     </div>
-
-    <div class="navgroup">
-      <h5>Practise &amp; sign-off</h5>
-      <a href="#reference" data-p="reference"><svg class="g" viewBox="0 0 22 14"><rect x="3" y="2" width="16" height="10" rx="1.5" stroke="currentColor" stroke-width="1.3" fill="none"/><path d="M3 6h16M9 6v6" stroke="currentColor" stroke-width="1.3"/></svg>Quick reference</a>
-      <a href="#quiz" data-p="quiz"><svg class="g" viewBox="0 0 22 14"><circle cx="11" cy="7" r="5" stroke="currentColor" stroke-width="1.3" fill="none"/><path d="M9.3 5.6c0-1 .8-1.6 1.7-1.6s1.7.6 1.7 1.5c0 1.4-1.7 1.3-1.7 2.6" stroke="currentColor" stroke-width="1.3" fill="none"/><circle cx="11" cy="10" r=".8" fill="currentColor"/></svg>Self-test</a>
-      <a href="#competency" data-p="competency"><svg class="g" viewBox="0 0 22 14"><path d="M3 7l3 3 6-7" stroke="currentColor" stroke-width="1.6" fill="none"/><path d="M14 5h6M14 9h4" stroke="currentColor" stroke-width="1.3"/></svg>Competency checklist</a>
-      <a href="#library" data-p="library"><svg class="g" viewBox="0 0 22 14"><path d="M4 2v10M8 2v10M12 3l4 9" stroke="currentColor" stroke-width="1.4"/></svg>Source documents</a>
+    <div class="grp">
+      <h5>Practise & sign-off</h5>
+      <a href="#reference" data-p="reference" data-c="#0A5B57"><span class="dot"></span>Quick reference</a>
+      <a href="#quiz" data-p="quiz" data-c="#0A5B57"><span class="dot"></span>Self-test</a>
+      <a href="#competency" data-p="competency" data-c="#0A5B57"><span class="dot"></span>Competency checklist</a>
+      <a href="#library" data-p="library" data-c="#0A5B57"><span class="dot"></span>Source documents</a>
     </div>
   </nav>
 
@@ -95,21 +90,27 @@
   </div>
 </aside>
 
-<!-- ================= MAIN ================= -->
 <div class="main">
   <div class="topbar">
-    <button class="burger" id="burger" aria-label="Open menu">&#9776;</button>
-    <b style="font-family:var(--disp);font-size:15px">PFT Education Hub</b>
+    <button class="iconbtn" id="burger" aria-label="Open menu">&#9776;</button>
+    <b>PFT Education Hub</b>
+    <button class="iconbtn sp" id="searchbtn2" aria-label="Search">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none">
+        <circle cx="7" cy="7" r="5" stroke="currentColor" stroke-width="1.7"/>
+        <path d="M11 11l3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+      </svg>
+    </button>
   </div>
+
   <div class="wrap">
-
-<!-- ============================================================ HOME -->
-<section class="page on" id="home">
-  <p class="eyebrow">Respiratory Care Laboratory Section &middot; Staff education</p>
-  <h1>Everything the lab measures,<br class="nb">and how to know it's right.</h1>
-  <p class="lede">A study reference for our PFT team. Each test is laid out the same way &mdash; what it measures, how it is performed, what makes a manoeuvre acceptable, and how the numbers are read &mdash; following the current ATS/ERS technical standards.</p>
-
-  <div class="hero">
+    <section class="page" id="home">
+      <header class="mast">
+        <p class="eyebrow">Respiratory Care Laboratory Section &middot; Staff education</p>
+        <h1>Everything the lab measures,<br>and how to know it&rsquo;s right.</h1>
+        <p class="lede">A study reference for our PFT team. Each test is laid out the same way &mdash; what it measures, how it is performed, what makes a manoeuvre acceptable, and how the numbers are read &mdash; following the current ATS/ERS technical standards.</p>
+      </header>
+      <div class="body">
+<div class="hero">
     <svg class="plot" viewBox="0 0 720 300" role="img" aria-label="Annotated maximal flow-volume loop showing PEF, FEF25-75 and FVC">
       <!-- axes -->
       <line class="axis" x1="70" y1="20" x2="70" y2="278"/>
@@ -141,42 +142,70 @@
     </div>
   </div>
 
-  <h2>How to use this hub</h2>
-  <p>Work through it in order the first time. Every test page follows the same five-part structure, so once you learn the shape you can find anything quickly.</p>
+      <h2>Find what you need</h2>
+      <p>Every test is laid out the same way: what it measures, how it is performed,
+      what makes a manoeuvre acceptable, and how the numbers are read. Learn the shape once
+      and you can find anything.</p>
+      <p><strong>In a hurry?</strong> Press <code>/</code> or <code>Ctrl&nbsp;+&nbsp;K</code> anywhere
+      to search every section at once &mdash; try <em>repeatability</em>, <em>breath-hold</em>
+      or <em>z-score</em>.</p>
 
-  <ol class="steps">
-    <li><b>Record card</b>The spec panel at the top: governing standard, what the test measures, how long it takes, and who should not be tested.</li>
-    <li><b>Physiology</b>What is actually happening in the lung, in one or two paragraphs. If you can explain this to the patient, you can coach the manoeuvre.</li>
-    <li><b>Procedure</b>Numbered steps in the order you perform them, with the coaching phrases in <span class="say">italic teal</span>.</li>
-    <li><b>Acceptability &amp; repeatability</b>The criteria that decide whether the effort counts. This is the section to memorise.</li>
-    <li><b>Reporting &amp; interpretation</b>Which value to report, and what the number means.</li>
-  </ol>
+    <div class="lgrp">
+      <h3>Start here</h3>
+      <div class="lgrid">
+        <a class="tile" href="#foundations" data-p="foundations" style="--tc:#5B4B8A"><b>Physiology & terms</b><span>Volumes, capacities, z-scores, the vocabulary</span></a>
+        <a class="tile" href="#prep" data-p="prep" style="--tc:#5B4B8A"><b>Patient preparation</b><span>Withholding, contraindications, measuring correctly</span></a>
+        <a class="tile" href="#qc" data-p="qc" style="--tc:#5B4B8A"><b>Calibration & QC</b><span>Daily checks, tolerances, biological controls</span></a>
+      </div>
+    </div>
+    <div class="lgrp">
+      <h3>Core lung function</h3>
+      <div class="lgrid">
+        <a class="tile" href="#spirometry" data-p="spirometry" style="--tc:#0F7B75"><b>Spirometry</b><span>Acceptability, repeatability and session grading</span></a>
+        <a class="tile" href="#bdr" data-p="bdr" style="--tc:#0F7B75"><b>Bronchodilator response</b><span>The 2022 definition, and how to calculate it</span></a>
+        <a class="tile" href="#volumes" data-p="volumes" style="--tc:#0F7B75"><b>Lung volumes</b><span>Plethysmography, dilution, and confirming restriction</span></a>
+        <a class="tile" href="#dlco" data-p="dlco" style="--tc:#0F7B75"><b>DLCO</b><span>Gas transfer, adjustments, and reading it with KCO</span></a>
+        <a class="tile" href="#oscillometry" data-p="oscillometry" style="--tc:#0F7B75"><b>Oscillometry / IOS</b><span>Tidal-breathing measurement when effort fails</span></a>
+        <a class="tile" href="#muscle" data-p="muscle" style="--tc:#0F7B75"><b>MIP / MEP / SNIP</b><span>Is the pump failing, or is the lung small?</span></a>
+      </div>
+    </div>
+    <div class="lgrp">
+      <h3>Provocation & exercise</h3>
+      <div class="lgrid">
+        <a class="tile" href="#mct" data-p="mct" style="--tc:#B0761F"><b>Methacholine challenge</b><span>Dosing, stop criteria, and safe discharge</span></a>
+        <a class="tile" href="#sixmwt" data-p="sixmwt" style="--tc:#B0761F"><b>6-minute walk test</b><span>The corridor, the phrases, the desaturation</span></a>
+        <a class="tile" href="#cpet" data-p="cpet" style="--tc:#B0761F"><b>CPET</b><span>Which system gives out first</span></a>
+        <a class="tile" href="#hast" data-p="hast" style="--tc:#B0761F"><b>Hypoxic challenge</b><span>Whether a patient needs in-flight oxygen</span></a>
+      </div>
+    </div>
+    <div class="lgrp">
+      <h3>Blood gas & bronchoscopy</h3>
+      <div class="lgrid">
+        <a class="tile" href="#abg" data-p="abg" style="--tc:#A5333F"><b>Arterial blood gas</b><span>Sampling, pre-analytical errors, interpretation</span></a>
+        <a class="tile" href="#bronch" data-p="bronch" style="--tc:#A5333F"><b>Bronchoscopy & EBUS</b><span>Airway, monitoring and specimen handling</span></a>
+      </div>
+    </div>
+    <div class="lgrp">
+      <h3>Reading the report</h3>
+      <div class="lgrid">
+        <a class="tile" href="#interpretation" data-p="interpretation" style="--tc:#1C3A45"><b>Interpretation</b><span>The sequence that never misses a pattern</span></a>
+        <a class="tile" href="#patterns" data-p="patterns" style="--tc:#1C3A45"><b>Loop patterns</b><span>Six shapes, and what each one means</span></a>
+      </div>
+    </div>
+    <div class="lgrp">
+      <h3>Practise & sign-off</h3>
+      <div class="lgrid">
+        <a class="tile" href="#reference" data-p="reference" style="--tc:#0A5B57"><b>Quick reference</b><span>Every threshold on one page</span></a>
+        <a class="tile" href="#quiz" data-p="quiz" style="--tc:#0A5B57"><b>Self-test</b><span>33 questions with explanations</span></a>
+        <a class="tile" href="#competency" data-p="competency" style="--tc:#0A5B57"><b>Competency checklist</b><span>What you must do unsupervised</span></a>
+        <a class="tile" href="#library" data-p="library" style="--tc:#0A5B57"><b>Source documents</b><span>The published standards behind all of it</span></a>
+      </div>
+    </div>
 
-  <h2>Where to start</h2>
-  <div class="grid2">
-    <a class="card" href="#foundations" data-p="foundations">
-      <h4>New to the lab</h4>
-      <p>Physiology and terminology, then patient preparation, then spirometry. Do not move on until you can grade a spirometry session without looking.</p>
-      <span class="go">Physiology &amp; terms &rarr;</span>
-    </a>
-    <a class="card" href="#qc" data-p="qc">
-      <h4>Opening the lab today</h4>
-      <p>Daily calibration and quality control, with the tolerances and what to do when a check fails.</p>
-      <span class="go">Calibration &amp; QC &rarr;</span>
-    </a>
-    <a class="card" href="#interpretation" data-p="interpretation">
-      <h4>Reading a report</h4>
-      <p>The 2022 interpretation standard: z-scores, GLI reference equations, obstruction vs restriction, and the three severity grades.</p>
-      <span class="go">Interpretation &rarr;</span>
-    </a>
-    <a class="card" href="#quiz" data-p="quiz">
-      <h4>Testing yourself</h4>
-      <p>Thirty questions with explanations, drawn from every section. Use it before a competency review.</p>
-      <span class="go">Self-test &rarr;</span>
-    </a>
-  </div>
+      <h2>What changed recently</h2>
+      <p>If you trained more than a few years ago, four things have moved. These are the
+      differences that most often show up as errors in our reports.</p>
 
-  <h2>What changed recently</h2>
   <p>If you trained more than a few years ago, four things have moved. These are the differences that most often show up as errors in our reports.</p>
   <div class="scroller">
   <table class="tbl">
@@ -193,16 +222,19 @@
     <p>This hub is a teaching summary written for our team, not a substitute for the published standards or for our departmental SOPs. Where a number here differs from the original ATS/ERS document, the original document wins. Where it differs from our SOP or our analyser's instructions for use, raise it with the section head rather than changing practice on your own.</p>
   </div>
 
-  <p class="srcline">Primary sources: ATS/ERS Standardization of Spirometry 2019 Update &middot; ERS/ATS Lung Volumes 2023 Update &middot; ERS/ATS Single-breath CO Uptake 2017 &middot; ERS/ATS Interpretive Strategies 2022 &middot; ERS Bronchial Challenge Testing 2017 &middot; ATS/ERS Field Walking Tests 2014 &middot; ERS Respiratory Oscillometry 2020.</p>
-</section>
+  
+<p class="srcline">Primary sources: ATS/ERS Standardization of Spirometry 2019 Update &middot; ERS/ATS Lung Volumes 2023 Update &middot; ERS/ATS Single-breath CO Uptake 2017 &middot; ERS/ATS Interpretive Strategies 2022 &middot; ERS Bronchial Challenge Testing 2017 &middot; ATS/ERS Field Walking Tests 2014 &middot; ERS Respiratory Oscillometry 2020.</p>
+      </div>
+    </section>
 
-<!-- ============================================================ FOUNDATIONS -->
-<section class="page" id="foundations">
-  <p class="eyebrow">Start here &middot; 01</p>
-  <h1>Physiology &amp; terminology</h1>
-  <p class="lede">Every value we report is a subdivision of one thing: the volume of gas the lungs can hold, and how fast it moves in and out. Learn the map first and the rest of the hub becomes naming.</p>
-
-  <h2>The lung subdivisions</h2>
+    <section class="page" id="foundations">
+      <header class="mast">
+        <p class="eyebrow">Start here &middot; 01</p>
+        <h1>Physiology &amp; terminology</h1>
+        <p class="lede">Every value we report is a subdivision of one thing: the volume of gas the lungs can hold, and how fast it moves in and out. Learn the map first and the rest of the hub becomes naming.</p>
+      </header>
+      <div class="body">
+<h2>The lung subdivisions</h2>
   <p>Four <em>volumes</em> that do not overlap, and four <em>capacities</em> that are sums of volumes. Spirometry measures everything except the residual volume; anything containing RV must come from a lung volume test.</p>
 
   <figure>
@@ -315,15 +347,17 @@
     <li><strong>Repeatable</strong> &mdash; two or more acceptable manoeuvres agree within a defined tolerance. Acceptability is about one effort; repeatability is about the session.</li>
   </ul>
   <p class="srcline">Sources: ATS/ERS Standardization of Spirometry 2019 Update &middot; ERS/ATS Interpretive Strategies for Routine Lung Function Tests 2022 &middot; ERS/ATS Lung Volumes 2023 Update.</p>
-</section>
+      </div>
+    </section>
 
-<!-- ============================================================ PREP -->
-<section class="page" id="prep">
-  <p class="eyebrow">Start here &middot; 02</p>
-  <h1>Patient preparation &amp; safety</h1>
-  <p class="lede">Most poor-quality studies are decided before the patient sits down. Preparation, contraindication screening and infection control are as much a part of the test as the manoeuvre.</p>
-
-  <h2>Before the appointment</h2>
+    <section class="page" id="prep">
+      <header class="mast">
+        <p class="eyebrow">Start here &middot; 02</p>
+        <h1>Patient preparation &amp; safety</h1>
+        <p class="lede">Most poor-quality studies are decided before the patient sits down. Preparation, contraindication screening and infection control are as much a part of the test as the manoeuvre.</p>
+      </header>
+      <div class="body">
+<h2>Before the appointment</h2>
   <p>Give these instructions when booking, and confirm them at reception. Record any deviation on the report &mdash; an un-withheld bronchodilator changes how the physician reads the study.</p>
   <ul>
     <li>No smoking or vaping for at least <strong>1 hour</strong> before testing; for DLCO, ideally <strong>24 hours</strong>, and record carboxyhaemoglobin if available.</li>
@@ -394,23 +428,22 @@
     <li>Handle used circuits as contaminated: gloves on, remove the filter into clinical waste, then hand hygiene.</li>
   </ul>
   <p class="srcline">Sources: ATS/ERS Standardization of Spirometry 2019 Update &middot; ATS/ERS General Considerations for Lung Function Testing &middot; ERS/ATS Interpretive Strategies 2022. Confirm withholding times against your unit's SOP and the referring team's instructions.</p>
-</section>
+      </div>
+    </section>
 
-<!-- ============================================================ QC -->
-<section class="page" id="qc">
-  <p class="eyebrow">Start here &middot; 03</p>
-  <h1>Calibration &amp; quality control</h1>
-  <p class="lede">Quality control is what separates a diagnostic laboratory from a device in a room. A result you cannot defend with a calibration log is not a result.</p>
-
-  <div class="spec">
-    <dl>
-      <dt>Standards</dt><dd>ATS/ERS Spirometry 2019 &middot; ERS/ATS Lung Volumes 2023 &middot; ERS/ATS DLCO 2017</dd>
-      <dt>Owner</dt><dd>The technologist opening the lab that day, countersigned by the section head weekly</dd>
-      <dt>Records</dt><dd>Retained and available for JCI / CBAHI review. Log every check, including failures and the corrective action</dd>
-    </dl>
-  </div>
-
-  <h2>The distinction that gets confused</h2>
+    <section class="page" id="qc">
+      <header class="mast">
+        <p class="eyebrow">Start here &middot; 03</p>
+        <h1>Calibration &amp; quality control</h1>
+        <p class="lede">Quality control is what separates a diagnostic laboratory from a device in a room. A result you cannot defend with a calibration log is not a result.</p>
+      </header>
+        <div class="spec"><dl>
+          <div class="cell"><dt>Standards</dt><dd>ATS/ERS Spirometry 2019 &middot; ERS/ATS Lung Volumes 2023 &middot; ERS/ATS DLCO 2017</dd></div>
+          <div class="cell"><dt>Owner</dt><dd>The technologist opening the lab that day, countersigned by the section head weekly</dd></div>
+          <div class="cell"><dt>Records</dt><dd>Retained and available for JCI / CBAHI review. Log every check, including failures and the corrective action</dd></div>
+        </dl></div>
+      <div class="body">
+<h2>The distinction that gets confused</h2>
   <p><strong>Calibration</strong> adjusts the device so its output matches a known input. <strong>Calibration verification</strong> checks that the device still reads a known input correctly, without changing anything. Most modern systems are verified daily and calibrated only when verification fails or after service.</p>
 
   <h2>Daily &mdash; before the first patient</h2>
@@ -464,26 +497,25 @@
     <p>Stop testing on that device. Repeat the check to rule out technique. Inspect for an obvious cause &mdash; loose tubing, damaged sensor, wrong ambient entry, expired gas. Recalibrate if the system permits, then re-verify. If it still fails, tag the device out of service and notify the section head. Document the failure, the action taken, and whether any patient studies since the last passing check need review.</p>
   </div>
   <p class="srcline">Sources: ATS/ERS Standardization of Spirometry 2019 Update &middot; ERS/ATS 2017 DLCO Standards &middot; ERS/ATS Lung Volumes 2023 Update. Frequencies and tolerances must also satisfy the manufacturer's instructions for use and our accreditation requirements.</p>
-</section>
+      </div>
+    </section>
 
-<!-- ============================================================ SPIROMETRY -->
-<section class="page" id="spirometry">
-  <p class="eyebrow">Core lung function</p>
-  <h1>Spirometry</h1>
-  <p class="lede">The most requested and most coach-dependent test in the lab. Everything downstream &mdash; bronchodilator response, lung volumes, DLCO interpretation &mdash; depends on getting this right.</p>
-
-  <div class="spec">
-    <dl>
-      <dt>Standard</dt><dd>ATS/ERS Standardization of Spirometry, 2019 Update &mdash; <em>Am J Respir Crit Care Med</em> 2019;200:e70&ndash;e88</dd>
-      <dt>Measures</dt><dd>FVC, FEV<sub>1</sub>, FEV<sub>1</sub>/FVC, PEF, FEF<sub>25&ndash;75</sub>, FEV<sub>6</sub>, forced and slow inspiratory indices</dd>
-      <dt>Duration</dt><dd>10&ndash;15 minutes typical; longer with a difficult coach or a post-bronchodilator study</dd>
-      <dt>Position</dt><dd>Seated with a chair that has arms and no wheels, feet flat, head neutral or slightly elevated. Nose clip on</dd>
-      <dt>Minimum effort</dt><dd>3 acceptable manoeuvres; stop at 8 attempts or sooner if the patient is fatiguing</dd>
-      <dt>Target grade</dt><dd>A or B for both FEV<sub>1</sub> and FVC</dd>
-    </dl>
-  </div>
-
-  <h2>What it measures</h2>
+    <section class="page" id="spirometry">
+      <header class="mast">
+        <p class="eyebrow">Core lung function</p>
+        <h1>Spirometry</h1>
+        <p class="lede">The most requested and most coach-dependent test in the lab. Everything downstream &mdash; bronchodilator response, lung volumes, DLCO interpretation &mdash; depends on getting this right.</p>
+      </header>
+        <div class="spec"><dl>
+          <div class="cell"><dt>Standard</dt><dd>ATS/ERS Standardization of Spirometry, 2019 Update &mdash; <em>Am J Respir Crit Care Med</em> 2019;200:e70&ndash;e88</dd></div>
+          <div class="cell"><dt>Measures</dt><dd>FVC, FEV<sub>1</sub>, FEV<sub>1</sub>/FVC, PEF, FEF<sub>25&ndash;75</sub>, FEV<sub>6</sub>, forced and slow inspiratory indices</dd></div>
+          <div class="cell"><dt>Duration</dt><dd>10&ndash;15 minutes typical; longer with a difficult coach or a post-bronchodilator study</dd></div>
+          <div class="cell"><dt>Position</dt><dd>Seated with a chair that has arms and no wheels, feet flat, head neutral or slightly elevated. Nose clip on</dd></div>
+          <div class="cell"><dt>Minimum effort</dt><dd>3 acceptable manoeuvres; stop at 8 attempts or sooner if the patient is fatiguing</dd></div>
+          <div class="cell"><dt>Target grade</dt><dd>A or B for both FEV<sub>1</sub> and FVC</dd></div>
+        </dl></div>
+      <div class="body">
+<h2>What it measures</h2>
   <p>The patient inflates to total lung capacity, then empties as fast and as completely as possible. The rate of emptying is set by airway calibre and by lung elastic recoil; the volume emptied is set by lung size and by how much gas is trapped behind closing airways.</p>
   <p>Immediately after the blast begins, the intrathoracic airways are compressed by pleural pressure and flow becomes <strong>effort independent</strong> &mdash; pushing harder does not increase flow beyond that point. This is why PEF depends on how hard the patient blasts, while the descending limb and FEF<sub>25&ndash;75</sub> do not. It is also why a submaximal effort produces a curve that looks smooth but reports a falsely low FEV<sub>1</sub>.</p>
 
@@ -582,24 +614,23 @@
   <h2>Slow vital capacity</h2>
   <p>An SVC or IVC is performed unforced, from TLC to RV or from RV to TLC, and is used to derive lung volume subdivisions. In airway obstruction the SVC is often larger than the FVC because slow emptying avoids dynamic airway compression; that difference is itself a sign of gas trapping. The two largest acceptable VC values should agree within <strong>0.150&nbsp;L</strong>.</p>
   <p class="srcline">Source: Graham BL et al. Standardization of Spirometry 2019 Update. An Official ATS/ERS Technical Statement. Am J Respir Crit Care Med 2019;200(8):e70&ndash;e88.</p>
-</section>
+      </div>
+    </section>
 
-<!-- ============================================================ BDR -->
-<section class="page" id="bdr">
-  <p class="eyebrow">Core lung function</p>
-  <h1>Bronchodilator responsiveness</h1>
-  <p class="lede">The definition changed in 2022 and this is the most common source of out-of-date reporting in a PFT lab. Learn the new formula and stop quoting 12&nbsp;% and 200&nbsp;mL.</p>
-
-  <div class="spec">
-    <dl>
-      <dt>Standard</dt><dd>ERS/ATS Technical Standard on Interpretive Strategies for Routine Lung Function Tests, 2022 &mdash; <em>Eur Respir J</em> 2022;60:2101499</dd>
-      <dt>Measures</dt><dd>Change in FEV<sub>1</sub> and FVC after a short-acting bronchodilator</dd>
-      <dt>Duration</dt><dd>Roughly 30 minutes including the waiting period</dd>
-      <dt>Term</dt><dd>"Bronchodilator responsiveness", not "reversibility" &mdash; reversibility implies the obstruction was abolished</dd>
-    </dl>
-  </div>
-
-  <h2>The current definition</h2>
+    <section class="page" id="bdr">
+      <header class="mast">
+        <p class="eyebrow">Core lung function</p>
+        <h1>Bronchodilator responsiveness</h1>
+        <p class="lede">The definition changed in 2022 and this is the most common source of out-of-date reporting in a PFT lab. Learn the new formula and stop quoting 12&nbsp;% and 200&nbsp;mL.</p>
+      </header>
+        <div class="spec"><dl>
+          <div class="cell"><dt>Standard</dt><dd>ERS/ATS Technical Standard on Interpretive Strategies for Routine Lung Function Tests, 2022 &mdash; <em>Eur Respir J</em> 2022;60:2101499</dd></div>
+          <div class="cell"><dt>Measures</dt><dd>Change in FEV<sub>1</sub> and FVC after a short-acting bronchodilator</dd></div>
+          <div class="cell"><dt>Duration</dt><dd>Roughly 30 minutes including the waiting period</dd></div>
+          <div class="cell"><dt>Term</dt><dd>"Bronchodilator responsiveness", not "reversibility" &mdash; reversibility implies the obstruction was abolished</dd></div>
+        </dl></div>
+      <div class="body">
+<h2>The current definition</h2>
   <div class="note">
     <b>BDR is present when</b>
     <p style="font-family:var(--mono);font-size:15px;line-height:1.8;margin:6px 0 8px">
@@ -635,25 +666,24 @@
     </ul>
   </div>
   <p class="srcline">Sources: Stanojevic S et al. ERS/ATS technical standard on interpretive strategies for routine lung function tests. Eur Respir J 2022;60:2101499 &middot; ATS/ERS Spirometry 2019 Update.</p>
-</section>
+      </div>
+    </section>
 
-<!-- ============================================================ LUNG VOLUMES -->
-<section class="page" id="volumes">
-  <p class="eyebrow">Core lung function</p>
-  <h1>Static lung volumes</h1>
-  <p class="lede">The only way to confirm restriction, and the only way to quantify gas trapping. Substantially revised in 2023 &mdash; linked spirometry is now mandatory and FRC values are averaged rather than picked.</p>
-
-  <div class="spec">
-    <dl>
-      <dt>Standard</dt><dd>ERS/ATS Technical Statement: Standardisation of the Measurement of Lung Volumes, 2023 Update &mdash; <em>Eur Respir J</em> 2023;62:2201519</dd>
-      <dt>Measures</dt><dd>FRC, and from it RV, TLC, plus IC, ERV and VC from the linked spirometry</dd>
-      <dt>Methods</dt><dd>Body plethysmography (reference method) &middot; multiple-breath washout &middot; helium dilution</dd>
-      <dt>Duration</dt><dd>10&ndash;15 min for plethysmography; 20&ndash;30 min for gas dilution with washout intervals</dd>
-      <dt>Key change 2023</dt><dd>The IC and slow VC must be performed <strong>within the same linked manoeuvre</strong> as the FRC measurement, not separately</dd>
-    </dl>
-  </div>
-
-  <h2>Plethysmography &mdash; the principle</h2>
+    <section class="page" id="volumes">
+      <header class="mast">
+        <p class="eyebrow">Core lung function</p>
+        <h1>Static lung volumes</h1>
+        <p class="lede">The only way to confirm restriction, and the only way to quantify gas trapping. Substantially revised in 2023 &mdash; linked spirometry is now mandatory and FRC values are averaged rather than picked.</p>
+      </header>
+        <div class="spec"><dl>
+          <div class="cell"><dt>Standard</dt><dd>ERS/ATS Technical Statement: Standardisation of the Measurement of Lung Volumes, 2023 Update &mdash; <em>Eur Respir J</em> 2023;62:2201519</dd></div>
+          <div class="cell"><dt>Measures</dt><dd>FRC, and from it RV, TLC, plus IC, ERV and VC from the linked spirometry</dd></div>
+          <div class="cell"><dt>Methods</dt><dd>Body plethysmography (reference method) &middot; multiple-breath washout &middot; helium dilution</dd></div>
+          <div class="cell"><dt>Duration</dt><dd>10&ndash;15 min for plethysmography; 20&ndash;30 min for gas dilution with washout intervals</dd></div>
+          <div class="cell"><dt>Key change 2023</dt><dd>The IC and slow VC must be performed <strong>within the same linked manoeuvre</strong> as the FRC measurement, not separately</dd></div>
+        </dl></div>
+      <div class="body">
+<h2>Plethysmography &mdash; the principle</h2>
   <p>Boyle's law: at constant temperature, pressure multiplied by volume is constant. The patient sits in a sealed cabin. At end-expiration a shutter closes the mouthpiece, and the patient pants gently against the closed shutter. Because no gas leaves the chest, compressing and decompressing the thoracic gas changes both mouth pressure and cabin pressure, and the ratio of those changes gives the volume of gas in the thorax.</p>
   <p>The critical property: plethysmography measures <strong>all</strong> intrathoracic gas, including gas behind completely closed airways and gas in bullae. Gas dilution measures only the gas that communicates with the airway opening. In severe obstruction, FRC<sub>pleth</sub> exceeds FRC<sub>He</sub>, and the difference estimates the trapped, non-communicating volume.</p>
 
@@ -738,25 +768,24 @@
     <li>Any leak at the mouth or nose invalidates the test completely. Check the seal continuously.</li>
   </ul>
   <p class="srcline">Source: Bhakta NR, McGowan A, Ramsey KA, et al. ERS/ATS technical statement: standardisation of the measurement of lung volumes, 2023 update. Eur Respir J 2023;62(4):2201519.</p>
-</section>
+      </div>
+    </section>
 
-<!-- ============================================================ DLCO -->
-<section class="page" id="dlco">
-  <p class="eyebrow">Core lung function</p>
-  <h1>DLCO &mdash; single-breath carbon monoxide uptake</h1>
-  <p class="lede">The one routine test that looks past mechanics at the gas exchange surface itself. Also the test most sensitive to sloppy technique, because three separate signals &mdash; volume, timing and gas concentration &mdash; all have to be right at once.</p>
-
-  <div class="spec">
-    <dl>
-      <dt>Standard</dt><dd>2017 ERS/ATS Standards for Single-Breath Carbon Monoxide Uptake in the Lung &mdash; <em>Eur Respir J</em> 2017;49:1600016</dd>
-      <dt>Measures</dt><dd>DLCO (TLCO), alveolar volume V<sub>A</sub>, and the transfer coefficient K<sub>CO</sub> = DLCO/V<sub>A</sub></dd>
-      <dt>Units</dt><dd>mL&middot;min<sup>&minus;1</sup>&middot;mmHg<sup>&minus;1</sup> (ATS) or mmol&middot;min<sup>&minus;1</sup>&middot;kPa<sup>&minus;1</sup> (ERS, SI). 1 mmol&middot;min<sup>&minus;1</sup>&middot;kPa<sup>&minus;1</sup> &asymp; 2.987 mL&middot;min<sup>&minus;1</sup>&middot;mmHg<sup>&minus;1</sup></dd>
-      <dt>Duration</dt><dd>15&ndash;25 min, driven by the mandatory interval between manoeuvres</dd>
-      <dt>Manoeuvres</dt><dd>2 acceptable and repeatable; no more than 5 attempts in a session</dd>
-    </dl>
-  </div>
-
-  <h2>Why carbon monoxide</h2>
+    <section class="page" id="dlco">
+      <header class="mast">
+        <p class="eyebrow">Core lung function</p>
+        <h1>DLCO &mdash; single-breath carbon monoxide uptake</h1>
+        <p class="lede">The one routine test that looks past mechanics at the gas exchange surface itself. Also the test most sensitive to sloppy technique, because three separate signals &mdash; volume, timing and gas concentration &mdash; all have to be right at once.</p>
+      </header>
+        <div class="spec"><dl>
+          <div class="cell"><dt>Standard</dt><dd>2017 ERS/ATS Standards for Single-Breath Carbon Monoxide Uptake in the Lung &mdash; <em>Eur Respir J</em> 2017;49:1600016</dd></div>
+          <div class="cell"><dt>Measures</dt><dd>DLCO (TLCO), alveolar volume V<sub>A</sub>, and the transfer coefficient K<sub>CO</sub> = DLCO/V<sub>A</sub></dd></div>
+          <div class="cell"><dt>Units</dt><dd>mL&middot;min<sup>&minus;1</sup>&middot;mmHg<sup>&minus;1</sup> (ATS) or mmol&middot;min<sup>&minus;1</sup>&middot;kPa<sup>&minus;1</sup> (ERS, SI). 1 mmol&middot;min<sup>&minus;1</sup>&middot;kPa<sup>&minus;1</sup> &asymp; 2.987 mL&middot;min<sup>&minus;1</sup>&middot;mmHg<sup>&minus;1</sup></dd></div>
+          <div class="cell"><dt>Duration</dt><dd>15&ndash;25 min, driven by the mandatory interval between manoeuvres</dd></div>
+          <div class="cell"><dt>Manoeuvres</dt><dd>2 acceptable and repeatable; no more than 5 attempts in a session</dd></div>
+        </dl></div>
+      <div class="body">
+<h2>Why carbon monoxide</h2>
   <p>CO binds to haemoglobin roughly 200 times more avidly than oxygen, so as soon as a CO molecule crosses the alveolar membrane it is bound and effectively removed from the capillary plasma. The partial pressure of CO in the blood therefore stays near zero throughout the breath-hold, and the driving pressure across the membrane is simply the alveolar CO pressure. Uptake becomes limited by diffusion rather than by perfusion, which is exactly what we want to measure.</p>
   <p>An inert tracer gas &mdash; helium or methane &mdash; is inhaled at the same time. It does not cross the membrane, so its dilution tells you the alveolar volume the CO was distributed into, and lets you calculate how much of the CO disappearance was genuine uptake.</p>
 
@@ -857,25 +886,24 @@
     <li><strong>Insufficient interval between manoeuvres</strong> &mdash; residual CO raises the back pressure and lowers each successive result. A stepwise fall across three manoeuvres is this fault until proven otherwise.</li>
   </ul>
   <p class="srcline">Source: Graham BL, Brusasco V, Burgos F, et al. 2017 ERS/ATS standards for single-breath carbon monoxide uptake in the lung. Eur Respir J 2017;49(1):1600016.</p>
-</section>
+      </div>
+    </section>
 
-<!-- ============================================================ OSCILLOMETRY -->
-<section class="page" id="oscillometry">
-  <p class="eyebrow">Core lung function</p>
-  <h1>Oscillometry (IOS / FOT)</h1>
-  <p class="lede">Measured during quiet tidal breathing, so it works for patients who cannot perform a forced manoeuvre &mdash; young children, the frail, the severely breathless.</p>
-
-  <div class="spec">
-    <dl>
-      <dt>Standard</dt><dd>Technical Standards for Respiratory Oscillometry, ERS 2020 &mdash; <em>Eur Respir J</em> 2020;55:1900753</dd>
-      <dt>Measures</dt><dd>Respiratory system resistance (R) and reactance (X) across a range of oscillation frequencies</dd>
-      <dt>Duration</dt><dd>5&ndash;10 minutes</dd>
-      <dt>Effort</dt><dd>Tidal breathing only. Effort independent</dd>
-      <dt>Order</dt><dd>Perform <strong>before</strong> spirometry &mdash; deep inspirations and forced manoeuvres alter airway tone</dd>
-    </dl>
-  </div>
-
-  <h2>How it works</h2>
+    <section class="page" id="oscillometry">
+      <header class="mast">
+        <p class="eyebrow">Core lung function</p>
+        <h1>Oscillometry (IOS / FOT)</h1>
+        <p class="lede">Measured during quiet tidal breathing, so it works for patients who cannot perform a forced manoeuvre &mdash; young children, the frail, the severely breathless.</p>
+      </header>
+        <div class="spec"><dl>
+          <div class="cell"><dt>Standard</dt><dd>Technical Standards for Respiratory Oscillometry, ERS 2020 &mdash; <em>Eur Respir J</em> 2020;55:1900753</dd></div>
+          <div class="cell"><dt>Measures</dt><dd>Respiratory system resistance (R) and reactance (X) across a range of oscillation frequencies</dd></div>
+          <div class="cell"><dt>Duration</dt><dd>5&ndash;10 minutes</dd></div>
+          <div class="cell"><dt>Effort</dt><dd>Tidal breathing only. Effort independent</dd></div>
+          <div class="cell"><dt>Order</dt><dd>Perform <strong>before</strong> spirometry &mdash; deep inspirations and forced manoeuvres alter airway tone</dd></div>
+        </dl></div>
+      <div class="body">
+<h2>How it works</h2>
   <p>A loudspeaker superimposes small pressure oscillations on the patient's tidal breathing. The device measures the resulting pressure and flow and derives the <strong>impedance</strong> of the respiratory system, which splits into a resistive component in phase with flow and a reactive component out of phase with it.</p>
   <p>Frequency matters because low-frequency oscillations penetrate deep into the lung while high-frequency oscillations are damped in the proximal airways. That is what makes the technique regionally informative.</p>
 
@@ -905,25 +933,24 @@
     <p>Reported as a fall in R5. A decrease of around <strong>40&nbsp;% or more</strong> in R5 is widely used as a significant response in adults, and the 2020 standard also supports expressing change in z-scores. The threshold differs from spirometry &mdash; do not carry the 10&nbsp;% rule across.</p>
   </div>
   <p class="srcline">Source: King GG, Bates J, Berger KI, et al. Technical standards for respiratory oscillometry. Eur Respir J 2020;55(2):1900753.</p>
-</section>
+      </div>
+    </section>
 
-<!-- ============================================================ MUSCLE -->
-<section class="page" id="muscle">
-  <p class="eyebrow">Core lung function</p>
-  <h1>Respiratory muscle strength</h1>
-  <p class="lede">When the VC is low and TLC is low but the lung itself looks normal, the question is usually whether the pump is failing. MIP and MEP answer it non-invasively.</p>
-
-  <div class="spec">
-    <dl>
-      <dt>Standards</dt><dd>ATS/ERS Statement on Respiratory Muscle Testing 2002 &middot; ERS Statement on Respiratory Muscle Testing at Rest and During Exercise, 2019 &mdash; <em>Eur Respir J</em> 2019;53:1801214</dd>
-      <dt>Measures</dt><dd>MIP (PI<sub>max</sub>), MEP (PE<sub>max</sub>), SNIP</dd>
-      <dt>Units</dt><dd>cmH<sub>2</sub>O. MIP is a negative pressure; report the magnitude and state the convention used</dd>
-      <dt>Duration</dt><dd>10&ndash;15 minutes</dd>
-      <dt>Indications</dt><dd>Neuromuscular disease, unexplained restriction or dyspnoea, diaphragm dysfunction, weaning assessment, pre-operative risk</dd>
-    </dl>
-  </div>
-
-  <h2>Technique</h2>
+    <section class="page" id="muscle">
+      <header class="mast">
+        <p class="eyebrow">Core lung function</p>
+        <h1>Respiratory muscle strength</h1>
+        <p class="lede">When the VC is low and TLC is low but the lung itself looks normal, the question is usually whether the pump is failing. MIP and MEP answer it non-invasively.</p>
+      </header>
+        <div class="spec"><dl>
+          <div class="cell"><dt>Standards</dt><dd>ATS/ERS Statement on Respiratory Muscle Testing 2002 &middot; ERS Statement on Respiratory Muscle Testing at Rest and During Exercise, 2019 &mdash; <em>Eur Respir J</em> 2019;53:1801214</dd></div>
+          <div class="cell"><dt>Measures</dt><dd>MIP (PI<sub>max</sub>), MEP (PE<sub>max</sub>), SNIP</dd></div>
+          <div class="cell"><dt>Units</dt><dd>cmH<sub>2</sub>O. MIP is a negative pressure; report the magnitude and state the convention used</dd></div>
+          <div class="cell"><dt>Duration</dt><dd>10&ndash;15 minutes</dd></div>
+          <div class="cell"><dt>Indications</dt><dd>Neuromuscular disease, unexplained restriction or dyspnoea, diaphragm dysfunction, weaning assessment, pre-operative risk</dd></div>
+        </dl></div>
+      <div class="body">
+<h2>Technique</h2>
   <ol class="steps">
     <li><b>Choose the interface</b>A flanged mouthpiece is standard; a rubber tube-type mouthpiece can be used if the patient cannot seal. The mouthpiece must contain a small leak &mdash; a needle-sized orifice roughly 1&ndash;2&nbsp;mm &mdash; to prevent glottis closure and to stop the cheek and mouth muscles generating pressure that the chest did not.</li>
     <li><b>MIP from residual volume</b>Patient exhales fully to RV, then makes a maximal inspiratory effort against the occluded mouthpiece. <span class="say">"Blow all the way out &hellip; now suck in as hard as you possibly can and keep sucking."</span></li>
@@ -943,26 +970,24 @@
 
   <p>Supine VC is a useful adjunct. A fall of more than about <strong>20&ndash;25&nbsp;%</strong> from sitting to supine suggests diaphragm weakness, because the abdominal contents are no longer being supported against a weak diaphragm.</p>
   <p class="srcline">Sources: ATS/ERS Statement on Respiratory Muscle Testing, Am J Respir Crit Care Med 2002;166:518&ndash;624 &middot; Laveneziana P et al. ERS statement on respiratory muscle testing at rest and during exercise. Eur Respir J 2019;53:1801214.</p>
-</section>
+      </div>
+    </section>
 
-
-<!-- ============================================================ MCT -->
-<section class="page" id="mct">
-  <p class="eyebrow">Provocation &amp; exercise</p>
-  <h1>Methacholine challenge</h1>
-  <p class="lede">A deliberate, controlled provocation of bronchoconstriction. The highest-risk routine test in the lab, and the one where your safety discipline matters most.</p>
-
-  <div class="spec">
-    <dl>
-      <dt>Standard</dt><dd>ERS Technical Standard on Bronchial Challenge Testing: General Considerations and Performance of Methacholine Challenge Tests, 2017 &mdash; <em>Eur Respir J</em> 2017;49:1601526</dd>
-      <dt>Measures</dt><dd>PD<sub>20</sub> &mdash; the cumulative <strong>delivered dose</strong> of methacholine causing a 20&nbsp;% fall in FEV<sub>1</sub></dd>
-      <dt>Duration</dt><dd>45&ndash;90 minutes including recovery</dd>
-      <dt>Main value</dt><dd>Its <strong>negative</strong> predictive value. A normal challenge in a symptomatic patient argues strongly against current asthma</dd>
-      <dt>Supervision</dt><dd>A physician must be immediately available. Rescue bronchodilator, oxygen and resuscitation equipment present and checked</dd>
-    </dl>
-  </div>
-
-  <div class="note">
+    <section class="page" id="mct">
+      <header class="mast">
+        <p class="eyebrow">Provocation &amp; exercise</p>
+        <h1>Methacholine challenge</h1>
+        <p class="lede">A deliberate, controlled provocation of bronchoconstriction. The highest-risk routine test in the lab, and the one where your safety discipline matters most.</p>
+      </header>
+        <div class="spec"><dl>
+          <div class="cell"><dt>Standard</dt><dd>ERS Technical Standard on Bronchial Challenge Testing: General Considerations and Performance of Methacholine Challenge Tests, 2017 &mdash; <em>Eur Respir J</em> 2017;49:1601526</dd></div>
+          <div class="cell"><dt>Measures</dt><dd>PD<sub>20</sub> &mdash; the cumulative <strong>delivered dose</strong> of methacholine causing a 20&nbsp;% fall in FEV<sub>1</sub></dd></div>
+          <div class="cell"><dt>Duration</dt><dd>45&ndash;90 minutes including recovery</dd></div>
+          <div class="cell"><dt>Main value</dt><dd>Its <strong>negative</strong> predictive value. A normal challenge in a symptomatic patient argues strongly against current asthma</dd></div>
+          <div class="cell"><dt>Supervision</dt><dd>A physician must be immediately available. Rescue bronchodilator, oxygen and resuscitation equipment present and checked</dd></div>
+        </dl></div>
+      <div class="body">
+<div class="note">
     <b>Why PD<sub>20</sub> replaced PC<sub>20</sub></b>
     <p>PC<sub>20</sub> is a concentration, so it is only meaningful if everyone uses the same nebuliser output, the same inhalation time and the same breathing pattern. The 2017 standard moved to PD<sub>20</sub>, the cumulative dose actually delivered in micrograms, which lets any suitable nebuliser or dosimeter be used as long as its delivery characteristics are known and documented.</p>
   </div>
@@ -1022,25 +1047,24 @@
     <p>FEV<sub>1</sub> has fallen 20&nbsp;% or more &middot; the patient reports chest tightness, marked breathlessness or wheeze that distresses them &middot; oxygen saturation falls &middot; light-headedness or syncope &middot; the patient asks to stop. Give the bronchodilator, sit the patient up, monitor, and call the physician. Never leave a patient alone during recovery.</p>
   </div>
   <p class="srcline">Source: Coates AL, Wanger J, Cockcroft DW, et al. ERS technical standard on bronchial challenge testing: general considerations and performance of methacholine challenge tests. Eur Respir J 2017;49(5):1601526.</p>
-</section>
+      </div>
+    </section>
 
-<!-- ============================================================ 6MWT -->
-<section class="page" id="sixmwt">
-  <p class="eyebrow">Provocation &amp; exercise</p>
-  <h1>Six-minute walk test</h1>
-  <p class="lede">Simple equipment, unforgiving standardisation. The distance is only comparable across visits if the corridor, the phrases and the encouragement are identical every time.</p>
-
-  <div class="spec">
-    <dl>
-      <dt>Standard</dt><dd>ATS/ERS Technical Standard: Field Walking Tests in Chronic Respiratory Disease, 2014 &mdash; <em>Eur Respir J</em> 2014;44:1428&ndash;1446</dd>
-      <dt>Measures</dt><dd>6-minute walk distance (6MWD), with SpO<sub>2</sub>, heart rate, and Borg dyspnoea and fatigue scores</dd>
-      <dt>Course</dt><dd>A flat, straight, enclosed <strong>30&nbsp;m</strong> corridor with cones at each end and markers every 3&nbsp;m. Never a treadmill, never a shorter lap</dd>
-      <dt>Duration</dt><dd>About 30 minutes including rest and a second test</dd>
-      <dt>MCID</dt><dd>Roughly <strong>30&nbsp;m</strong> in chronic respiratory disease</dd>
-    </dl>
-  </div>
-
-  <h2>Contraindications</h2>
+    <section class="page" id="sixmwt">
+      <header class="mast">
+        <p class="eyebrow">Provocation &amp; exercise</p>
+        <h1>Six-minute walk test</h1>
+        <p class="lede">Simple equipment, unforgiving standardisation. The distance is only comparable across visits if the corridor, the phrases and the encouragement are identical every time.</p>
+      </header>
+        <div class="spec"><dl>
+          <div class="cell"><dt>Standard</dt><dd>ATS/ERS Technical Standard: Field Walking Tests in Chronic Respiratory Disease, 2014 &mdash; <em>Eur Respir J</em> 2014;44:1428&ndash;1446</dd></div>
+          <div class="cell"><dt>Measures</dt><dd>6-minute walk distance (6MWD), with SpO<sub>2</sub>, heart rate, and Borg dyspnoea and fatigue scores</dd></div>
+          <div class="cell"><dt>Course</dt><dd>A flat, straight, enclosed <strong>30&nbsp;m</strong> corridor with cones at each end and markers every 3&nbsp;m. Never a treadmill, never a shorter lap</dd></div>
+          <div class="cell"><dt>Duration</dt><dd>About 30 minutes including rest and a second test</dd></div>
+          <div class="cell"><dt>MCID</dt><dd>Roughly <strong>30&nbsp;m</strong> in chronic respiratory disease</dd></div>
+        </dl></div>
+      <div class="body">
+<h2>Contraindications</h2>
   <ul class="crit bad">
     <li><strong>Absolute:</strong> unstable angina, or myocardial infarction within the previous month.</li>
     <li><strong>Relative:</strong> resting heart rate above 120&nbsp;bpm, systolic blood pressure above 180&nbsp;mmHg, diastolic above 100&nbsp;mmHg &mdash; discuss with the physician before proceeding.</li>
@@ -1083,25 +1107,24 @@
     <li>The number of tests performed and which distance is being reported.</li>
   </ul>
   <p class="srcline">Source: Holland AE, Spruit MA, Troosters T, et al. An official ERS/ATS technical standard: field walking tests in chronic respiratory disease. Eur Respir J 2014;44(6):1428&ndash;1446.</p>
-</section>
+      </div>
+    </section>
 
-<!-- ============================================================ CPET -->
-<section class="page" id="cpet">
-  <p class="eyebrow">Provocation &amp; exercise</p>
-  <h1>Cardiopulmonary exercise testing</h1>
-  <p class="lede">The only test that stresses the heart, lungs, circulation and muscle together and lets you see which one gives out first. Resource-heavy, and the most demanding test we run.</p>
-
-  <div class="spec">
-    <dl>
-      <dt>Standards</dt><dd>ATS/ACCP Statement on Cardiopulmonary Exercise Testing, 2003 &middot; ERS Statement on Standardisation of Cardiopulmonary Exercise Testing in Chronic Lung Diseases, 2019</dd>
-      <dt>Measures</dt><dd>V&#775;O<sub>2</sub>, V&#775;CO<sub>2</sub>, V&#775;E, ventilatory threshold, O<sub>2</sub> pulse, V&#775;E/V&#775;CO<sub>2</sub>, ECG, blood pressure, SpO<sub>2</sub></dd>
-      <dt>Protocol</dt><dd>Incremental ramp on a cycle ergometer, sized so that loaded exercise lasts <strong>8&ndash;12 minutes</strong></dd>
-      <dt>Duration</dt><dd>60&ndash;90 minutes including consent, set-up and recovery</dd>
-      <dt>Staffing</dt><dd>Two staff minimum, with a physician immediately available and resuscitation equipment checked</dd>
-    </dl>
-  </div>
-
-  <h2>Test structure</h2>
+    <section class="page" id="cpet">
+      <header class="mast">
+        <p class="eyebrow">Provocation &amp; exercise</p>
+        <h1>Cardiopulmonary exercise testing</h1>
+        <p class="lede">The only test that stresses the heart, lungs, circulation and muscle together and lets you see which one gives out first. Resource-heavy, and the most demanding test we run.</p>
+      </header>
+        <div class="spec"><dl>
+          <div class="cell"><dt>Standards</dt><dd>ATS/ACCP Statement on Cardiopulmonary Exercise Testing, 2003 &middot; ERS Statement on Standardisation of Cardiopulmonary Exercise Testing in Chronic Lung Diseases, 2019</dd></div>
+          <div class="cell"><dt>Measures</dt><dd>V&#775;O<sub>2</sub>, V&#775;CO<sub>2</sub>, V&#775;E, ventilatory threshold, O<sub>2</sub> pulse, V&#775;E/V&#775;CO<sub>2</sub>, ECG, blood pressure, SpO<sub>2</sub></dd></div>
+          <div class="cell"><dt>Protocol</dt><dd>Incremental ramp on a cycle ergometer, sized so that loaded exercise lasts <strong>8&ndash;12 minutes</strong></dd></div>
+          <div class="cell"><dt>Duration</dt><dd>60&ndash;90 minutes including consent, set-up and recovery</dd></div>
+          <div class="cell"><dt>Staffing</dt><dd>Two staff minimum, with a physician immediately available and resuscitation equipment checked</dd></div>
+        </dl></div>
+      <div class="body">
+<h2>Test structure</h2>
   <ol class="steps">
     <li><b>Rest</b>3 minutes seated on the ergometer, collecting resting gas exchange and a 12-lead ECG.</li>
     <li><b>Unloaded pedalling</b>3 minutes at zero or minimal resistance, 60&ndash;70&nbsp;rpm, to establish an unloaded baseline.</li>
@@ -1152,25 +1175,24 @@
     <li>Biological control on a staff member periodically &mdash; the only check that catches a systematic error in the whole chain.</li>
   </ul>
   <p class="srcline">Sources: ATS/ACCP Statement on Cardiopulmonary Exercise Testing. Am J Respir Crit Care Med 2003;167:211&ndash;277 &middot; Radtke T et al. ERS statement on standardisation of cardiopulmonary exercise testing in chronic lung diseases. Eur Respir Rev 2019;28:180101.</p>
-</section>
+      </div>
+    </section>
 
-<!-- ============================================================ HAST -->
-<section class="page" id="hast">
-  <p class="eyebrow">Provocation &amp; exercise</p>
-  <h1>Hypoxic challenge (HAST)</h1>
-  <p class="lede">A cabin at cruising altitude is pressurised to the equivalent of roughly 1,500&ndash;2,500&nbsp;m, where inspired oxygen falls to about 15&nbsp;%. This test asks what that will do to a particular patient before they board.</p>
-
-  <div class="spec">
-    <dl>
-      <dt>Standard</dt><dd>BTS Recommendations for Managing Passengers with Stable Respiratory Disease Planning Air Travel, 2011 &mdash; <em>Thorax</em> 2011;66:Suppl 1</dd>
-      <dt>Measures</dt><dd>PaO<sub>2</sub> (or SpO<sub>2</sub>) after breathing a hypoxic mixture equivalent to cabin altitude</dd>
-      <dt>Gas</dt><dd><strong>15&nbsp;% oxygen</strong>, delivered by body-box nitrogen dilution, a calibrated gas blender, or 100&nbsp;% nitrogen through a 40&nbsp;% Venturi mask</dd>
-      <dt>Duration</dt><dd>20 minutes of exposure, plus baseline and recovery</dd>
-      <dt>Referred for</dt><dd>COPD, interstitial lung disease, cystic fibrosis, neuromuscular and chest wall disease, previous in-flight symptoms, recent pneumothorax, and children with chronic lung disease</dd>
-    </dl>
-  </div>
-
-  <h2>Procedure</h2>
+    <section class="page" id="hast">
+      <header class="mast">
+        <p class="eyebrow">Provocation &amp; exercise</p>
+        <h1>Hypoxic challenge (HAST)</h1>
+        <p class="lede">A cabin at cruising altitude is pressurised to the equivalent of roughly 1,500&ndash;2,500&nbsp;m, where inspired oxygen falls to about 15&nbsp;%. This test asks what that will do to a particular patient before they board.</p>
+      </header>
+        <div class="spec"><dl>
+          <div class="cell"><dt>Standard</dt><dd>BTS Recommendations for Managing Passengers with Stable Respiratory Disease Planning Air Travel, 2011 &mdash; <em>Thorax</em> 2011;66:Suppl 1</dd></div>
+          <div class="cell"><dt>Measures</dt><dd>PaO<sub>2</sub> (or SpO<sub>2</sub>) after breathing a hypoxic mixture equivalent to cabin altitude</dd></div>
+          <div class="cell"><dt>Gas</dt><dd><strong>15&nbsp;% oxygen</strong>, delivered by body-box nitrogen dilution, a calibrated gas blender, or 100&nbsp;% nitrogen through a 40&nbsp;% Venturi mask</dd></div>
+          <div class="cell"><dt>Duration</dt><dd>20 minutes of exposure, plus baseline and recovery</dd></div>
+          <div class="cell"><dt>Referred for</dt><dd>COPD, interstitial lung disease, cystic fibrosis, neuromuscular and chest wall disease, previous in-flight symptoms, recent pneumothorax, and children with chronic lung disease</dd></div>
+        </dl></div>
+      <div class="body">
+<h2>Procedure</h2>
   <ol class="steps">
     <li><b>Baseline</b>Record room-air SpO<sub>2</sub>, heart rate, blood pressure and symptoms. Take a baseline arterial or arterialised capillary blood gas.</li>
     <li><b>Start the hypoxic mixture</b>Confirm the delivered FiO<sub>2</sub> with an oxygen analyser before the patient breathes it. Never assume the blender setting.</li>
@@ -1194,24 +1216,23 @@
     <p>HAST models hypoxia at rest. It does not model walking to the toilet mid-flight, the effect of gas expansion on bullae or a recent pneumothorax, or the consequences of a long journey to the airport. Report the number, note the limits, and leave the flight decision to the referring physician.</p>
   </div>
   <p class="srcline">Source: British Thoracic Society Standards of Care Committee. Managing passengers with stable respiratory disease planning air travel: BTS recommendations. Thorax 2011;66(Suppl 1):i1&ndash;i30. Confirm the delivery method and thresholds against our departmental SOP.</p>
-</section>
+      </div>
+    </section>
 
-<!-- ============================================================ ABG -->
-<section class="page" id="abg">
-  <p class="eyebrow">Blood gas &amp; bronchoscopy</p>
-  <h1>Arterial blood gas</h1>
-  <p class="lede">A direct measurement of gas exchange and acid&ndash;base status, and the reference against which pulse oximetry is judged. Pre-analytical technique decides the accuracy far more often than the analyser does.</p>
-
-  <div class="spec">
-    <dl>
-      <dt>Measures</dt><dd>pH, PaCO<sub>2</sub>, PaO<sub>2</sub>, HCO<sub>3</sub><sup>&minus;</sup>, base excess, SaO<sub>2</sub>, and co-oximetry for total Hb, COHb and MetHb</dd>
-      <dt>Site</dt><dd>Radial artery preferred &mdash; superficial, collateral supply, compressible. Brachial and femoral are alternatives with higher risk</dd>
-      <dt>Duration</dt><dd>10 minutes including compression</dd>
-      <dt>Sample</dt><dd>Pre-heparinised syringe, air bubbles expelled immediately, mixed thoroughly, analysed within 15 minutes or placed on ice</dd>
-    </dl>
-  </div>
-
-  <h2>Sampling</h2>
+    <section class="page" id="abg">
+      <header class="mast">
+        <p class="eyebrow">Blood gas &amp; bronchoscopy</p>
+        <h1>Arterial blood gas</h1>
+        <p class="lede">A direct measurement of gas exchange and acid&ndash;base status, and the reference against which pulse oximetry is judged. Pre-analytical technique decides the accuracy far more often than the analyser does.</p>
+      </header>
+        <div class="spec"><dl>
+          <div class="cell"><dt>Measures</dt><dd>pH, PaCO<sub>2</sub>, PaO<sub>2</sub>, HCO<sub>3</sub><sup>&minus;</sup>, base excess, SaO<sub>2</sub>, and co-oximetry for total Hb, COHb and MetHb</dd></div>
+          <div class="cell"><dt>Site</dt><dd>Radial artery preferred &mdash; superficial, collateral supply, compressible. Brachial and femoral are alternatives with higher risk</dd></div>
+          <div class="cell"><dt>Duration</dt><dd>10 minutes including compression</dd></div>
+          <div class="cell"><dt>Sample</dt><dd>Pre-heparinised syringe, air bubbles expelled immediately, mixed thoroughly, analysed within 15 minutes or placed on ice</dd></div>
+        </dl></div>
+      <div class="body">
+<h2>Sampling</h2>
   <ol class="steps">
     <li><b>Check and consent</b>Confirm identity, indication, current FiO<sub>2</sub> and how long it has been stable. Ask about anticoagulation and about previous difficulty.</li>
     <li><b>Assess collateral circulation</b>Modified Allen test on the intended radial site, or a Doppler check. Document the result.</li>
@@ -1250,23 +1271,22 @@
     <p>Our GEM Premier systems use continuous intelligent quality management rather than scheduled external controls, checking the sensors against onboard reference solutions on every sample and between samples. Your responsibilities remain: confirm the analyser is in a passing state before use, do not override a flagged result, respond to failure messages instead of retrying the sample, and log every corrective action for accreditation review. Follow our departmental POCT SOP for external quality assessment and competency requirements.</p>
   </div>
   <p class="srcline">Follow our POCT and blood gas SOPs, the analyser's instructions for use, and CBAHI / JCI point-of-care testing requirements.</p>
-</section>
+      </div>
+    </section>
 
-<!-- ============================================================ BRONCH -->
-<section class="page" id="bronch">
-  <p class="eyebrow">Blood gas &amp; bronchoscopy</p>
-  <h1>Bronchoscopy &amp; EBUS support</h1>
-  <p class="lede">In the bronchoscopy suite our role is airway, oxygenation and monitoring. The proceduralist is looking down the scope; someone has to be watching the patient.</p>
-
-  <div class="spec">
-    <dl>
-      <dt>Our role</dt><dd>Equipment readiness, airway and oxygen management, sedation monitoring, specimen handling, and recovery</dd>
-      <dt>Procedures</dt><dd>Diagnostic bronchoscopy &middot; bronchoalveolar lavage &middot; endobronchial and transbronchial biopsy &middot; EBUS-TBNA &middot; therapeutic aspiration</dd>
-      <dt>Monitoring</dt><dd>Continuous SpO<sub>2</sub> and heart rate, ECG, and blood pressure at set intervals, from sedation through to discharge criteria being met</dd>
-    </dl>
-  </div>
-
-  <h2>Before the procedure</h2>
+    <section class="page" id="bronch">
+      <header class="mast">
+        <p class="eyebrow">Blood gas &amp; bronchoscopy</p>
+        <h1>Bronchoscopy &amp; EBUS support</h1>
+        <p class="lede">In the bronchoscopy suite our role is airway, oxygenation and monitoring. The proceduralist is looking down the scope; someone has to be watching the patient.</p>
+      </header>
+        <div class="spec"><dl>
+          <div class="cell"><dt>Our role</dt><dd>Equipment readiness, airway and oxygen management, sedation monitoring, specimen handling, and recovery</dd></div>
+          <div class="cell"><dt>Procedures</dt><dd>Diagnostic bronchoscopy &middot; bronchoalveolar lavage &middot; endobronchial and transbronchial biopsy &middot; EBUS-TBNA &middot; therapeutic aspiration</dd></div>
+          <div class="cell"><dt>Monitoring</dt><dd>Continuous SpO<sub>2</sub> and heart rate, ECG, and blood pressure at set intervals, from sedation through to discharge criteria being met</dd></div>
+        </dl></div>
+      <div class="body">
+<h2>Before the procedure</h2>
   <ul>
     <li>Confirm consent, fasting status, allergies, anticoagulation and its last dose, and relevant recent imaging and lung function.</li>
     <li>Check suction, oxygen supply and delivery devices, the bag-valve-mask, the airway trolley and the resuscitation trolley &mdash; all present, connected and working before the patient enters.</li>
@@ -1293,24 +1313,23 @@
     <li>Complete the procedure record, the specimen log and the scope reprocessing documentation.</li>
   </ul>
   <p class="srcline">Follow our departmental bronchoscopy and endoscope reprocessing SOPs, sedation policy, and infection prevention requirements.</p>
-</section>
+      </div>
+    </section>
 
-<!-- ============================================================ INTERPRETATION -->
-<section class="page" id="interpretation">
-  <p class="eyebrow">Reading the report</p>
-  <h1>Interpretation</h1>
-  <p class="lede">A structured order of questions that turns a page of numbers into a statement. Follow it every time, in this order, and you will not miss a pattern.</p>
-
-  <div class="spec">
-    <dl>
-      <dt>Standard</dt><dd>ERS/ATS Technical Standard on Interpretive Strategies for Routine Lung Function Tests, 2022 &mdash; <em>Eur Respir J</em> 2022;60:2101499</dd>
-      <dt>Reference values</dt><dd>GLI 2012 spirometry (Global, race-neutral), GLI 2017 DLCO, GLI 2021 static lung volumes</dd>
-      <dt>Limit of normal</dt><dd>5th percentile, z-score <strong>&minus;1.645</strong></dd>
-      <dt>Severity</dt><dd>Three grades, by z-score of the primary abnormal index</dd>
-    </dl>
-  </div>
-
-  <h2>Step zero: is the study good enough to interpret</h2>
+    <section class="page" id="interpretation">
+      <header class="mast">
+        <p class="eyebrow">Reading the report</p>
+        <h1>Interpretation</h1>
+        <p class="lede">A structured order of questions that turns a page of numbers into a statement. Follow it every time, in this order, and you will not miss a pattern.</p>
+      </header>
+        <div class="spec"><dl>
+          <div class="cell"><dt>Standard</dt><dd>ERS/ATS Technical Standard on Interpretive Strategies for Routine Lung Function Tests, 2022 &mdash; <em>Eur Respir J</em> 2022;60:2101499</dd></div>
+          <div class="cell"><dt>Reference values</dt><dd>GLI 2012 spirometry (Global, race-neutral), GLI 2017 DLCO, GLI 2021 static lung volumes</dd></div>
+          <div class="cell"><dt>Limit of normal</dt><dd>5th percentile, z-score <strong>&minus;1.645</strong></dd></div>
+          <div class="cell"><dt>Severity</dt><dd>Three grades, by z-score of the primary abnormal index</dd></div>
+        </dl></div>
+      <div class="body">
+<h2>Step zero: is the study good enough to interpret</h2>
   <p>Before any number is read, check the session grades, the traces, and the technologist's comment. A grade E study with a low FVC may just be a patient who stopped early. Interpretation of an unacceptable study is worse than no interpretation, because it looks authoritative.</p>
 
   <h2>The sequence</h2>
@@ -1360,15 +1379,17 @@
   <h2>Change over time</h2>
   <p>Serial studies are often more useful than any single report, but only if you compare like with like: the same device where possible, the same reference equation throughout, the same time of day and the same medication state. State on the report which prior study you compared against. A short-term change in FEV<sub>1</sub> of less than about 12&nbsp;% or 200&nbsp;mL falls within ordinary within-subject variability for most patients, so read the trend rather than the last two points.</p>
   <p class="srcline">Source: Stanojevic S, Kaminsky DA, Miller MR, et al. ERS/ATS technical standard on interpretive strategies for routine lung function tests. Eur Respir J 2022;60(1):2101499.</p>
-</section>
+      </div>
+    </section>
 
-<!-- ============================================================ PATTERNS -->
-<section class="page" id="patterns">
-  <p class="eyebrow">Reading the report</p>
-  <h1>Loop patterns</h1>
-  <p class="lede">The flow&ndash;volume loop carries diagnostic information the numbers do not. Learn these six shapes and you will spot an upper airway lesion before the software flags anything.</p>
-
-  <figure>
+    <section class="page" id="patterns">
+      <header class="mast">
+        <p class="eyebrow">Reading the report</p>
+        <h1>Loop patterns</h1>
+        <p class="lede">The flow&ndash;volume loop carries diagnostic information the numbers do not. Learn these six shapes and you will spot an upper airway lesion before the software flags anything.</p>
+      </header>
+      <div class="body">
+<figure>
     <svg viewBox="0 0 700 440" role="img" aria-label="Six characteristic flow-volume loop shapes">
       <g font-family="Segoe UI, sans-serif">
       <!-- row 1 -->
@@ -1435,15 +1456,17 @@
     <p>Repeat it. A flattened inspiratory limb is far more often a submaximal inspiratory effort, a poor mouthpiece seal, or a patient who did not return to TLC. The finding only counts if it is reproducible across several acceptable manoeuvres &mdash; and if it is, say so explicitly in your comment so it is not dismissed.</p>
   </div>
   <p class="srcline">Sources: ATS/ERS Standardization of Spirometry 2019 Update &middot; ERS/ATS Interpretive Strategies 2022.</p>
-</section>
+      </div>
+    </section>
 
-<!-- ============================================================ REFERENCE -->
-<section class="page" id="reference">
-  <p class="eyebrow">Practise &amp; sign-off</p>
-  <h1>Quick reference</h1>
-  <p class="lede">Every threshold in the hub on one page. Print it, keep it at the workstation, and check it before you sign a report.</p>
-
-  <h2>Numbers to know by heart</h2>
+    <section class="page" id="reference">
+      <header class="mast">
+        <p class="eyebrow">Practise &amp; sign-off</p>
+        <h1>Quick reference</h1>
+        <p class="lede">Every threshold in the hub on one page. Print it, keep it at the workstation, and check it before you sign a report.</p>
+      </header>
+      <div class="body">
+<h2>Numbers to know by heart</h2>
   <div class="scroller">
   <table class="tbl">
     <tr><th>Value</th><th>Threshold</th><th>Applies to</th></tr>
@@ -1506,29 +1529,33 @@
     <tr><td class="num">DLCO / TLCO</td><td>Diffusing capacity / transfer factor for CO</td><td class="num">BTPS</td><td>Body temperature, ambient pressure, saturated</td></tr>
   </table>
   </div>
-</section>
+      </div>
+    </section>
 
-<!-- ============================================================ QUIZ -->
-<section class="page" id="quiz">
-  <p class="eyebrow">Practise &amp; sign-off</p>
-  <h1>Self-test</h1>
-  <p class="lede">Thirty-three questions across the whole hub. Every answer comes with an explanation and points back to the section it came from. Answers are not stored anywhere.</p>
-
-  <div class="scorebar">
+    <section class="page" id="quiz">
+      <header class="mast">
+        <p class="eyebrow">Practise &amp; sign-off</p>
+        <h1>Self-test</h1>
+        <p class="lede">Thirty-three questions across the whole hub. Every answer comes with an explanation and points back to the section it came from. Answers are not stored anywhere.</p>
+      </header>
+      <div class="body">
+<div class="scorebar">
     <span id="score">Answered 0 of 33 &middot; 0 correct</span>
     <button class="btn" id="resetQuiz" style="background:#0F7B75">Start again</button>
   </div>
   <div id="quizbody"></div>
   <p class="small" id="quizend"></p>
-</section>
+      </div>
+    </section>
 
-<!-- ============================================================ COMPETENCY -->
-<section class="page" id="competency">
-  <p class="eyebrow">Practise &amp; sign-off</p>
-  <h1>Competency checklist</h1>
-  <p class="lede">What a technologist must be able to do unsupervised before release to independent practice. Tick as you go &mdash; this is a study aid; the formal record is the departmental competency form signed by your assessor.</p>
-
-  <div class="scorebar" style="background:#1C3A45">
+    <section class="page" id="competency">
+      <header class="mast">
+        <p class="eyebrow">Practise &amp; sign-off</p>
+        <h1>Competency checklist</h1>
+        <p class="lede">What a technologist must be able to do unsupervised before release to independent practice. Tick as you go &mdash; this is a study aid; the formal record is the departmental competency form signed by your assessor.</p>
+      </header>
+      <div class="body">
+<div class="scorebar" style="background:#1C3A45">
     <span id="ckcount">0 of 0 complete</span>
     <button class="btn ghost" id="ckreset" style="color:#fff;border-color:#41616c">Clear ticks</button>
   </div>
@@ -1590,15 +1617,17 @@
     <li><input type="checkbox"><span>Writes a technologist comment that states what limited the study and how much weight the numbers carry.</span></li>
     <li><input type="checkbox"><span>Compares with prior studies using the same reference equation and states which study was compared.</span></li>
   </ul>
-</section>
+      </div>
+    </section>
 
-<!-- ============================================================ LIBRARY -->
-<section class="page" id="library">
-  <p class="eyebrow">Practise &amp; sign-off</p>
-  <h1>Source documents</h1>
-  <p class="lede">The published standards this hub summarises. Read the original for anything you are going to put in a policy, a report or an audit.</p>
-
-  <div class="scroller">
+    <section class="page" id="library">
+      <header class="mast">
+        <p class="eyebrow">Practise &amp; sign-off</p>
+        <h1>Source documents</h1>
+        <p class="lede">The published standards this hub summarises. Read the original for anything you are going to put in a policy, a report or an audit.</p>
+      </header>
+      <div class="body">
+<div class="scroller">
   <table class="tbl">
     <tr><th>Topic</th><th>Document</th><th>Year</th></tr>
     <tr><td>Spirometry</td><td>Graham BL, Steenbruggen I, Miller MR, et al. Standardization of Spirometry 2019 Update. An Official ATS/ERS Technical Statement. <em>Am J Respir Crit Care Med</em> 2019;200(8):e70&ndash;e88</td><td class="num">2019</td></tr>
@@ -1625,19 +1654,33 @@
     <b>Review log</b>
     <p>Content compiled August 2026 against the documents listed above. Next scheduled review: February 2027. Reviewer: __________________</p>
   </div>
-</section>
+      </div>
+    </section>
+  </div>
+</div>
+</div>
 
-  </div><!-- /wrap -->
-</div><!-- /main -->
-</div><!-- /shell -->
+<div class="ovl" id="ovl" role="dialog" aria-label="Search">
+  <div class="ovl-bg" id="ovlbg"></div>
+  <div class="ovl-box">
+    <div class="ovl-top">
+      <svg width="17" height="17" viewBox="0 0 16 16" fill="none" style="color:#5E7079">
+        <circle cx="7" cy="7" r="5" stroke="currentColor" stroke-width="1.6"/>
+        <path d="M11 11l3.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
+      <input id="q" type="search" placeholder="Search every section…" autocomplete="off" spellcheck="false">
+      <span class="ovl-esc">Esc</span>
+    </div>
+    <div class="ovl-res" id="res"></div>
+    <div class="ovl-foot"><span>&uarr; &darr; to move</span><span>&crarr; to open</span><span>Esc to close</span></div>
+  </div>
+</div>
 
+<script src="quiz.js"></script>
 <script src="site.js"></script>
 <script>
-/* offline support; silently skipped on file:// and plain http */
 if ('serviceWorker' in navigator && location.protocol === 'https:') {
-  window.addEventListener('load', function () {
-    navigator.serviceWorker.register('sw.js').catch(function () {});
-  });
+  window.addEventListener('load', function () { navigator.serviceWorker.register('sw.js').catch(function () {}); });
 }
 </script>
 </body>
