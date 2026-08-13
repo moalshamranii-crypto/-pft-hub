@@ -250,6 +250,8 @@
   function closeSearch() { ovl.classList.remove('on'); document.body.style.overflow = ''; }
 
   document.getElementById('searchbtn').addEventListener('click', openSearch);
+  var cta = document.getElementById('searchcta');
+  if (cta) cta.addEventListener('click', openSearch);
   document.getElementById('searchbtn2').addEventListener('click', openSearch);
   document.getElementById('ovlbg').addEventListener('click', closeSearch);
   q.addEventListener('input', function () { search(q.value); });
