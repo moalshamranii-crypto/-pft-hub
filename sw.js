@@ -21,6 +21,8 @@ var CORE = [
   './site.js',
   './quiz.js',
   './favicon.svg',
+  './cluster-logo.png',
+  './cluster-mark.png',
   './icon-192.png',
   './icon-512.png',
   './apple-touch-icon.png',

@@ -446,3 +446,24 @@ a.tile .tx>span{display:block;font-size:13.8px;color:var(--ink3);line-height:1.4
   a.pstep{padding:14px 12px 13px}
   a.pstep>span:last-child{display:none}
 }
+
+
+/* ---------- organisation identity ---------- */
+.orglogo{background:#fff;border-radius:10px;padding:10px 12px;margin:0 0 14px;
+  display:flex;justify-content:center}
+.orglogo img{display:block;width:100%;max-width:150px;height:auto}
+
+.orgbar{display:flex;align-items:center;gap:15px;padding:0 0 20px;margin-bottom:22px;
+  border-bottom:1px solid var(--rule)}
+.orgbar img{flex:0 0 auto;width:56px;height:auto}
+.orgtx b{display:block;font-family:var(--disp);font-size:15.5px;font-weight:600;
+  letter-spacing:-.01em;margin-bottom:2px}
+.orgtx span{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;
+  color:var(--muted);line-height:1.5}
+@media (max-width:560px){
+  .orgbar{gap:12px;padding-bottom:16px;margin-bottom:18px}
+  .orgbar img{width:44px}
+  .orgtx b{font-size:14px}
+  .orgtx span{font-size:9.5px}
+}
+@media print{ .orgbar{border-bottom:1px solid #ccc} }

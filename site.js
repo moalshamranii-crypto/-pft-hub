@@ -354,6 +354,22 @@
   });
   buildQuiz();
 
+  /* ---------- optional completion link, off unless a Form URL is set ---------- */
+  var FORM = (window.__COMPLETION_FORM || '').trim();
+  if (FORM) {
+    pages.forEach(function (p) {
+      if (['home','quiz','competency','library','reference'].indexOf(p.id) > -1) return;
+      var box = document.createElement('div');
+      box.className = 'note';
+      box.innerHTML = '<b>Record that you have read this</b><p>Your name and this section ' +
+        'are recorded so completed training can be evidenced. Nothing else about your ' +
+        'browsing is recorded.</p><p><a target="_blank" rel="noopener" href="' + FORM +
+        '">Open the completion form &rarr;</a></p>';
+      var pager = p.querySelector('.pager');
+      if (pager) p.insertBefore(box, pager); else p.appendChild(box);
+    });
+  }
+
   /* ---------- print: show everything ---------- */
   window.addEventListener('beforeprint', function () {
     pages.forEach(function (p) { p.classList.add('on'); });
