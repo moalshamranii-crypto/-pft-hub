@@ -104,6 +104,7 @@
     window.scrollTo(0, 0);
     closeMenu();
     document.title = (id === 'home' ? 'PFT Education Hub' : titleOf(id) + ' — PFT Education Hub');
+    track(id);
     spy();
   }
   window.__show = show;
@@ -119,6 +120,19 @@
     side.classList.toggle('open'); scrim.classList.toggle('on');
   });
   scrim.addEventListener('click', closeMenu);
+
+  /* ---------- analytics: one page_view per section ---------- */
+  function track(id) {
+    if (typeof window.gtag !== 'function') return;
+    try {
+      window.gtag('event', 'page_view', {
+        page_title: (id === 'home' ? 'Overview' : titleOf(id)),
+        page_location: location.origin + location.pathname + '#' + id,
+        page_path: location.pathname + '#' + id,
+        chapter: chapterOf(id) || 'Reference'
+      });
+    } catch (e) { /* never let analytics break the page */ }
+  }
 
   /* ---------- scrollspy + progress ---------- */
   function spy() {

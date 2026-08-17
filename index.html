@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-NJ8YC5T830"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-NJ8YC5T830');
-</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Staff education reference for the Respiratory Care Laboratory: pulmonary function testing procedures, acceptability criteria and interpretation, based on current ATS/ERS technical standards.">
@@ -2117,6 +2108,31 @@
     <div class="ovl-foot"><span>&uarr; &darr; to move</span><span>&crarr; to open</span><span>Esc to close</span></div>
   </div>
 </div>
+
+<!-- ============================================================
+     GOOGLE ANALYTICS 4
+     Paste your Measurement ID (looks like G-XXXXXXXXXX) between the
+     quotes below. Leave it empty and no request is made at all.
+     ============================================================ -->
+<script>window.__GA_ID = "";</script>
+<script>
+(function () {
+  var id = (window.__GA_ID || '').trim();
+  if (!id || location.protocol === 'file:') return;      // nothing loads unless configured
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function () { window.dataLayer.push(arguments); };
+  gtag('js', new Date());
+  // send_page_view is off: the Hub is one HTML file, so views are sent
+  // manually on each section change (see site.js) or every section would
+  // be counted as the same page.
+  gtag('config', id, { send_page_view: false, anonymize_ip: true, allow_google_signals: false });
+  var s = document.createElement('script');
+  s.async = true;
+  s.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(id);
+  s.onerror = function () { window.gtag = function () {}; };  // blocked or offline: stay silent
+  document.head.appendChild(s);
+})();
+</script>
 
 <!-- ============================================================
      OPTIONAL: record section completion (Microsoft Form)
