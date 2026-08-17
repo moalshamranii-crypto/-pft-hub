@@ -446,3 +446,18 @@ a.tile .tx>span{display:block;font-size:13.8px;color:var(--ink3);line-height:1.4
   a.pstep{padding:14px 12px 13px}
   a.pstep>span:last-child{display:none}
 }
+
+/* ---------- animated manoeuvre demonstration ---------- */
+.demo{background:var(--panel);border:1px solid var(--rule);border-radius:12px;
+  padding:16px 18px 12px;margin:24px 0 30px;box-shadow:var(--shadow-m)}
+.demo-head{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.demo-btn{display:inline-flex;align-items:center;gap:9px;background:var(--flow);color:#fff;border:0;
+  border-radius:8px;padding:9px 16px;font-family:var(--disp);font-size:13.5px;font-weight:600;cursor:pointer}
+.demo-btn:hover{background:#12928B}
+.demo-btn[data-running] svg{opacity:.55}
+.demo-time{font-family:var(--mono);font-size:12px;color:var(--muted);margin-left:auto}
+.demo-svg{display:block;width:100%;height:auto}
+.demo-cue{margin:2px 0 6px;min-height:44px;font-size:16px;line-height:1.45;color:var(--ink2)}
+.demo-cue b{font-family:var(--disp);display:block;font-size:12px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--muted);margin-bottom:3px;font-weight:600}
+.demo-cue .say{font-style:italic;color:var(--flow-d)}
